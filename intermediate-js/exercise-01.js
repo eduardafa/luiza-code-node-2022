@@ -6,17 +6,17 @@
 
 // validation by groups
 // CPF
-var regCpf = /^(\d{3})(\d{3})(\d{3})(\d{2})$/gim;
+const regCpf = /^(\d{3})(\d{3})(\d{3})(\d{2})$/gim;
 // birth date
 // This configuration returns the formatted date only if the input is a valid date. Otherwise, the output will be equal to the input, e.i., without formatting.
-var regBirthDate = /^([0-2][0-9]|[3][0-1])([0][1-9]|[1][0-2])(\d{4})$/gim;
+const regBirthDate = /^([0-2][0-9]|[3][0-1])([0][1-9]|[1][0-2])(\d{4})$/gim;
 // CEP
-var regCep = /^(\d{2})(\d{3})(\d{3})$/gim;
+const regCep = /^(\d{2})(\d{3})(\d{3})$/gim;
 
 const person = (cpf, birthDate, cep) => {
-    var formCpf = cpf.replace(regCpf, '$1.$2.$3-$4');
-    var formBirthDate = birthDate.replace(regBirthDate, '$1/$2/$3');
-    var formCep = cep.replace(regCep, '$1.$2-$3');
+    let formCpf = cpf.replace(regCpf, '$1.$2.$3-$4');
+    let formBirthDate = birthDate.replace(regBirthDate, '$1/$2/$3');
+    let formCep = cep.replace(regCep, '$1.$2-$3');
 
     console.log(
         `The CPF is ${formCpf}, the birth date is ${formBirthDate} and the CEP is ${formCep}!`
