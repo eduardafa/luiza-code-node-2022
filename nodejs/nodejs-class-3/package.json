@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-class-3",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "nodemonConfig": {
+    "watch": [
+      "*.js"
+    ],
+    "ext": "js",
+    "ignore": [
+      "*test.js"
+    ],
+    "delay": "3"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eduarda Franca <eduardafandrade@gmail.com> (https://github.com/eduardafa)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3"
+  }
+}

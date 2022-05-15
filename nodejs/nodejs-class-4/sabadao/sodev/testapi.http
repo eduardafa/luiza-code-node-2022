@@ -1,0 +1,4 @@
+##
+# test ping
+
+@api=http://localhost:3000

@@ -1,0 +1,37 @@
+##
+# Testar o ping
+
+@api=http://localhost:3000/api
+
+###
+#
+GET {{api}}/saude/ping
+ 
+###
+# Inserir um produto corretamente
+POST {{api}}/produtos
+Content-Type: application/json
+
+{
+    "codigo": "123",
+    "nome": "produto123"
+}
+
+###
+# Inserir um produto faltando codigo
+POST {{api}}/produtos
+Content-Type: application/json
+
+{
+    "nome2": "produto123"
+}
+
+###
+# Inserir um produto faltando codigo
+POST {{api}}/produtos/v2
+Content-Type: application/json
+
+{
+    "lixo": "produto123",
+    "qualquerCoisa": [1, "1"]
+}
